@@ -6,7 +6,7 @@ import com.example.tomo.areaselecttest.WeatherForecastAreaSelectListItemBindingM
 import com.example.tomo.areaselecttest.service.WeatherForecastService
 import com.example.tomo.areaselecttest.viewmodel.WeatherForecastAreaSettingViewModel
 
-class WeatherForecastAreaEpoxyController: TypedEpoxyController<WeatherForecastAreaSettingViewModel>() {
+class WeatherForecastAreaSettingEpoxyController: TypedEpoxyController<WeatherForecastAreaSettingViewModel>() {
 
     override fun buildModels(viewModel: WeatherForecastAreaSettingViewModel) {
 

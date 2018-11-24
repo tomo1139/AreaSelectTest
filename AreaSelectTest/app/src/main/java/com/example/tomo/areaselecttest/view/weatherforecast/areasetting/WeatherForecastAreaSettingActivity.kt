@@ -9,7 +9,6 @@ import android.databinding.DataBindingUtil
 import android.location.Geocoder
 import android.net.Uri
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.provider.Settings
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -34,8 +33,8 @@ import java.lang.ref.WeakReference
 class WeatherForecastAreaSettingActivity : AppCompatActivity(), WeatherForecastAreaSettingDelegate, TwoChoicesDialogFragment.Delegate {
 
     private val binding: ActivityWeatherForecastAreaSettingBinding by lazy { DataBindingUtil.setContentView<ActivityWeatherForecastAreaSettingBinding>(this, R.layout.activity_weather_forecast_area_setting)}
-    private val controller: WeatherForecastAreaEpoxyController by lazy {
-        WeatherForecastAreaEpoxyController()
+    private val controller: WeatherForecastAreaSettingEpoxyController by lazy {
+        WeatherForecastAreaSettingEpoxyController()
     }
     private val viewModel: WeatherForecastAreaSettingViewModel by lazy { WeatherForecastAreaSettingViewModel(WeakReference(this)) }
     private val settingsClient by lazy { LocationServices.getSettingsClient(this) }
