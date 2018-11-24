@@ -45,7 +45,7 @@ class WeatherForecastAreaSettingActivity : AppCompatActivity(), WeatherForecastA
                 super.onLocationResult(locationResult)
                 if (!Geocoder.isPresent()) return
                 if (locationResult.locations.size == 0) return
-                val location = locationResult.locations.get(0)
+                val location = locationResult.locations[0]
                 val geoCoder = Geocoder(this@WeatherForecastAreaSettingActivity)
                 val addresses = geoCoder.getFromLocation(location.latitude, location.longitude, 1)
                 addresses.firstOrNull()?.let {
