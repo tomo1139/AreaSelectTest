@@ -10,7 +10,7 @@ class WeatherForecastAreaSettingViewModel(val wDelegate: WeakReference<WeatherFo
 
     fun onClickLocationIcon() = wDelegate.get()?.onClickLocationIcon()
 
-    fun onClickSettingArea() {
+    fun onClickSettingArea() = Unit
 
-    }
+    fun onClickAreaName() = wDelegate.get()?.onClickAreaName()
 }

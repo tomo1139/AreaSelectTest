@@ -68,7 +68,7 @@ object WeatherForecastService {
             ))
     )
 
-    data class Area(val region: String, val prefectures: List<Prefecture>)
+    data class Area(val name: String, val prefectures: List<Prefecture>)
     data class Prefecture(val id: Int, val name: String)
 }
 

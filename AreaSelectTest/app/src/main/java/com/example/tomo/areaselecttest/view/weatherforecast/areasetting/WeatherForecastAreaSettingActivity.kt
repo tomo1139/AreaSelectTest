@@ -146,6 +146,9 @@ class WeatherForecastAreaSettingActivity : AppCompatActivity(), WeatherForecastA
         }
     }
 
+    override fun onClickAreaName() {
+    }
+
     companion object {
         fun newIntent(context: Context) = Intent(context, WeatherForecastAreaSettingActivity::class.java)
     }
