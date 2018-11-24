@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
 import com.example.tomo.areaselecttest.R
 import com.example.tomo.areaselecttest.databinding.ActivityWeatherForecastAreaSettingBinding
+import com.example.tomo.areaselecttest.viewmodel.WeatherForecastAreaSettingViewModel
 
 class WeatherForecastAreaSettingActivity : AppCompatActivity() {
 
@@ -15,14 +16,17 @@ class WeatherForecastAreaSettingActivity : AppCompatActivity() {
     private val controller: WeatherForecastAreaEpoxyController by lazy {
         WeatherForecastAreaEpoxyController()
     }
+    private val viewModel: WeatherForecastAreaSettingViewModel by lazy { WeatherForecastAreaSettingViewModel() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setSupportActionBar(binding.toolBar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = "地域設定"
 
         binding.recyclerView.adapter = controller.adapter
+        controller.setData(viewModel)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+                name="viewModel"
+                type="com.example.tomo.areaselecttest.viewmodel.WeatherForecastAreaSettingViewModel" />
+
+    </data>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/gray_lighter"
+                android:orientation="vertical" >
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="現在の地域設定"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:layout_marginTop="8dp"
+            />
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="14dp">
+
+                <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:background="@color/white"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:onClick="@{() -> viewModel.onClickLocationIcon()}"
+                />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="@{viewModel.settingArea}"
+                        android:textSize="16sp"
+                        android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:text="現在地に設定"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:paddingTop="17dp"
+                    android:paddingBottom="17dp"
+                    android:onClick="@{() -> viewModel.onClickSettingArea()}" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
