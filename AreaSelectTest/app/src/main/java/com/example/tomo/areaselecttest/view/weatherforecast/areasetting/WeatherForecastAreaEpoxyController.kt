@@ -18,7 +18,8 @@ class WeatherForecastAreaEpoxyController: TypedEpoxyController<WeatherForecastAr
         WeatherForecastService.getSettingAreaData().toList().forEach {
             WeatherForecastAreaSelectListItemBindingModel_()
                 .id(modelCountBuiltSoFar)
-                .name(it.name)
+                .viewModel(viewModel)
+                .area(it)
                 .addTo(this)
         }
     }

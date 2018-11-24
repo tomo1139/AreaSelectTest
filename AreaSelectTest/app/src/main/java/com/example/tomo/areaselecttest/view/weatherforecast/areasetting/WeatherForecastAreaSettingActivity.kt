@@ -18,8 +18,10 @@ import com.example.tomo.areaselecttest.R
 import com.example.tomo.areaselecttest.databinding.ActivityWeatherForecastAreaSettingBinding
 import com.example.tomo.areaselecttest.extension.showDialogWithAllowingStateLoss
 import com.example.tomo.areaselecttest.extension.showShortToast
+import com.example.tomo.areaselecttest.service.WeatherForecastService
 import com.example.tomo.areaselecttest.util.RequestCode
 import com.example.tomo.areaselecttest.view.dialog.TwoChoicesDialogFragment
+import com.example.tomo.areaselecttest.view.weatherforecast.prefecturesetting.WeatherForecastPrefectureSettingActivity
 import com.example.tomo.areaselecttest.viewmodel.WeatherForecastAreaSettingViewModel
 import com.google.android.gms.location.*
 import permissions.dispatcher.NeedsPermission
@@ -156,7 +158,8 @@ class WeatherForecastAreaSettingActivity : AppCompatActivity(), WeatherForecastA
         }
     }
 
-    override fun onClickAreaName() {
+    override fun onClickAreaName(area: WeatherForecastService.Area) {
+        startActivity(WeatherForecastPrefectureSettingActivity.newIntent(this, area))
     }
 
     companion object {

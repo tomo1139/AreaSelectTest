@@ -4,7 +4,7 @@
     <data>
 
         <variable name="viewModel" type="com.example.tomo.areaselecttest.viewmodel.WeatherForecastAreaSettingViewModel" />
-        <variable name="name" type="String" />
+        <variable name="area" type="com.example.tomo.areaselecttest.service.WeatherForecastService.Area" />
 
     </data>
 
@@ -24,7 +24,7 @@
                 android:background="@color/white"
                 android:foreground="?attr/selectableItemBackground"
                 android:orientation="horizontal"
-                android:onClick="@{() -> viewModel.onClickAreaName()}"
+                android:onClick="@{() -> viewModel.onClickAreaName(area)}"
                 android:gravity="center_vertical">
 
             <TextView
@@ -34,7 +34,7 @@
                     android:layout_marginStart="15dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="15dp"
-                    android:text="@{name}"
+                    android:text="@{area.name}"
                     android:textSize="14sp"
                     android:textColor="@color/black"
             />

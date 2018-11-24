@@ -1,5 +1,7 @@
 package com.example.tomo.areaselecttest.service
 
+import java.io.Serializable
+
 object WeatherForecastService {
 
     fun getSettingAreaData() = listOf(
@@ -68,7 +70,7 @@ object WeatherForecastService {
             ))
     )
 
-    data class Area(val name: String, val prefectures: List<Prefecture>)
-    data class Prefecture(val id: Int, val name: String)
+    data class Area(val name: String, val prefectures: List<Prefecture>) : Serializable
+    data class Prefecture(val id: Int, val name: String) : Serializable
 }
 

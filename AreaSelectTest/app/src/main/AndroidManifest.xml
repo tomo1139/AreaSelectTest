@@ -22,8 +22,12 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".view.weatherforecast.areasetting.WeatherForecastAreaSettingActivity"
-                  android:screenOrientation="portrait"/>
+        <activity
+                android:name=".view.weatherforecast.areasetting.WeatherForecastAreaSettingActivity"
+                android:screenOrientation="portrait"/>
+        <activity
+                android:name=".view.weatherforecast.prefecturesetting.WeatherForecastPrefectureSettingActivity"
+                android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
