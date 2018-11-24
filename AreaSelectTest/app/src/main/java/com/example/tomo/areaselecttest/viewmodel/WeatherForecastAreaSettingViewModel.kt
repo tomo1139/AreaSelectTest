@@ -1,14 +1,14 @@
 package com.example.tomo.areaselecttest.viewmodel
 
 import android.databinding.ObservableField
+import com.example.tomo.areaselecttest.view.weatherforecast.areasetting.WeatherForecastAreaSettingDelegate
+import java.lang.ref.WeakReference
 
-class WeatherForecastAreaSettingViewModel {
+class WeatherForecastAreaSettingViewModel(val wDelegate: WeakReference<WeatherForecastAreaSettingDelegate>) {
 
     val settingArea = ObservableField<String>("-")
 
-    fun onClickLocationIcon() {
-
-    }
+    fun onClickLocationIcon() = wDelegate.get()?.onClickLocationIcon()
 
     fun onClickSettingArea() {
 
