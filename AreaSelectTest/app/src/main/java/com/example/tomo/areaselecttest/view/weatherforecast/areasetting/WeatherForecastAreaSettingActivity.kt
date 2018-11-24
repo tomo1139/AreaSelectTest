@@ -9,6 +9,7 @@ import android.databinding.DataBindingUtil
 import android.location.Geocoder
 import android.net.Uri
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.provider.Settings
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
@@ -64,6 +65,10 @@ class WeatherForecastAreaSettingActivity : AppCompatActivity(), WeatherForecastA
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        savedInstanceState?.let {
+            viewModel.settingArea.set(it.getString(keyAreaName))
+        }
+
         setSupportActionBar(binding.toolBar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "地域設定"
@@ -75,6 +80,11 @@ class WeatherForecastAreaSettingActivity : AppCompatActivity(), WeatherForecastA
     override fun onPause() {
         super.onPause()
         fusedLocationClient.removeLocationUpdates(locationCallback)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString(keyAreaName, viewModel.settingArea.get())
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
@@ -150,6 +160,8 @@ class WeatherForecastAreaSettingActivity : AppCompatActivity(), WeatherForecastA
     }
 
     companion object {
+        private const val keyAreaName = "keyAreaName"
+
         fun newIntent(context: Context) = Intent(context, WeatherForecastAreaSettingActivity::class.java)
     }
 }

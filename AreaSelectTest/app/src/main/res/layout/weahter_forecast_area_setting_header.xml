@@ -27,7 +27,7 @@
                     android:text="現在の地域設定"
                     android:textColor="@color/black"
                     android:textSize="12sp"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="10dp"
             />
 
             <LinearLayout
@@ -39,8 +39,8 @@
                     android:layout_marginBottom="14dp">
 
                 <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:background="@color/white"
                         android:foreground="?attr/selectableItemBackground"
                         android:onClick="@{() -> viewModel.onClickLocationIcon()}"
@@ -84,8 +84,8 @@
                         android:textStyle="bold"
                         android:textSize="13dp"
                         android:layout_marginStart="15dp"
-                        android:layout_marginTop="15dp"
-                        android:layout_marginBottom="12dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="11dp"
                 />
 
             </FrameLayout>
