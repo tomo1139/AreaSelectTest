@@ -2,7 +2,7 @@ package com.example.tomo.areaselecttest.view.weatherforecast.areasetting
 
 import com.airbnb.epoxy.TypedEpoxyController
 import com.example.tomo.areaselecttest.WeahterForecastAreaSettingHeaderBindingModel_
-import com.example.tomo.areaselecttest.WeatherForecastAreaSettingAreaBindingModel_
+import com.example.tomo.areaselecttest.WeatherForecastAreaSelectListItemBindingModel_
 import com.example.tomo.areaselecttest.service.WeatherForecastService
 import com.example.tomo.areaselecttest.viewmodel.WeatherForecastAreaSettingViewModel
 
@@ -16,7 +16,7 @@ class WeatherForecastAreaEpoxyController: TypedEpoxyController<WeatherForecastAr
             .addTo(this)
 
         WeatherForecastService.getSettingAreaData().toList().forEach {
-            WeatherForecastAreaSettingAreaBindingModel_()
+            WeatherForecastAreaSelectListItemBindingModel_()
                 .id(modelCountBuiltSoFar)
                 .name(it.name)
                 .addTo(this)
