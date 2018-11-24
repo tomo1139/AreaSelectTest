@@ -6,4 +6,5 @@ import java.lang.ref.WeakReference
 class MainViewModel(private val wDelegate: WeakReference<MainDelegate>) {
 
     fun onClickButton1() = wDelegate.get()?.toWeatherForecastAresSetting()
+    fun onClickButton2() = wDelegate.get()?.toWeatherForecastDetail()
 }

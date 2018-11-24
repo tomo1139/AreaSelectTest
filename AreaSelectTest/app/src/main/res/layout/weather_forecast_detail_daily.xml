@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:elevation="2dp"
+            android:orientation="vertical">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp">
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/filled_top_rounded_white_background"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="15dp"
+                    android:elevation="2dp"
+            >
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="65dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/filled_top_rounded_white_background"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:elevation="2dp"
+                    android:visibility="invisible"
+            >
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/filled_bottom_right_top_rounded_white_background"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:elevation="2dp"
+        >
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:translationY="-135dp"
+                android:elevation="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="10dp">
+
+            <View
+                    android:background="#ffffff"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+            <View
+                    android:visibility="invisible"
+                    android:background="#ffffff"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</layout>
+

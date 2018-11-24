@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.tomo.areaselecttest.R
 import com.example.tomo.areaselecttest.databinding.ActivityMainBinding
 import com.example.tomo.areaselecttest.view.weatherforecast.areasetting.WeatherForecastAreaSettingActivity
+import com.example.tomo.areaselecttest.view.weatherforecast.detail.WeatherForecastDetailActivity
 import com.example.tomo.areaselecttest.viewmodel.MainViewModel
 import java.lang.ref.WeakReference
 
@@ -20,4 +21,5 @@ class MainActivity : AppCompatActivity(), MainDelegate {
     }
 
     override fun toWeatherForecastAresSetting() = startActivity(WeatherForecastAreaSettingActivity.newIntent(this))
+    override fun toWeatherForecastDetail() = startActivity(WeatherForecastDetailActivity.newIntent(this))
 }
